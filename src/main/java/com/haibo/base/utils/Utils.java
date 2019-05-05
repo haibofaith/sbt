@@ -1,4 +1,4 @@
-package com.haibo.base.Utils;
+package com.haibo.base.utils;
 
 import com.google.common.collect.Lists;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -70,6 +70,12 @@ public class Utils {
         return checkExtension(extension);
     }
 
+    /**
+     * 自动判断文件类型
+     * @param file
+     * @return
+     * @throws IOException
+     */
     public static Workbook getWorkbookAuto(MultipartFile file) throws IOException {
         /** 判断文件的类型，是2003还是2007 */
         boolean isExcel2003 = true;
