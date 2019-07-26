@@ -1,6 +1,6 @@
 package com.haibo.base.service.impl;
 
-import com.haibo.base.entity.User;
+import com.haibo.base.entity.UserInfo;
 import com.haibo.base.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -23,12 +23,12 @@ public class ProductServiceImpl implements ProductService{
     @Autowired
     private JdbcTemplate jdbcTemplate;
     @Override
-    public List<User> getList() {
+    public List<UserInfo> getList() {
         String sql = "select id,name,sex from t_2";
-        return (List<User>) jdbcTemplate.query(sql, new RowMapper<User>(){
+        return (List<UserInfo>) jdbcTemplate.query(sql, new RowMapper<UserInfo>(){
             @Override
-            public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-                User userInfo = new User();
+            public UserInfo mapRow(ResultSet rs, int rowNum) throws SQLException {
+                UserInfo userInfo = new UserInfo();
                 userInfo.setUserId(rs.getInt("id"));
                 userInfo.setUserName(rs.getString("name"));
                 return userInfo;

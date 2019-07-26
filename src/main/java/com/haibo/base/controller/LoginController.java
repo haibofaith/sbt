@@ -27,11 +27,6 @@ public class LoginController {
 
     private static User user = new User();
 
-    static {
-        user.setUserId(1);
-        user.setUserName("XiongHaiBo");
-    }
-
 
     @RequestMapping(value = "/user")
     public ResponseEntity<Object> getProduct() {
@@ -42,12 +37,6 @@ public class LoginController {
     @ResponseBody
     public User getUser() {
         return user;
-    }
-
-    @RequestMapping("/mysqlData")
-    public ResponseEntity<Object> mysqlData() {
-
-        return new ResponseEntity<>(productService.getList(), HttpStatus.OK);
     }
 
     @RequestMapping("/oracleData")

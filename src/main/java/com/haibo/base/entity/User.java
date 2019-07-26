@@ -8,31 +8,31 @@ import java.io.Serializable;
  * @description:
  */
 public class User implements Serializable{
-    private String userName;
-    private Integer userId;
-    private String password;
+    private Integer id;
+    private String name;
+    private String sex;
 
-    public String getPassword() {
-        return password;
+    public Integer getId() {
+        return id;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public String getSex() {
+        return sex;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 }
